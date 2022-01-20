@@ -5,7 +5,6 @@ arquivoConf="script-GUILHERME.conf"
 diretorioPrincipal="/usr/sbin/"
 diretorioConf="/etc/"
 
-echo "PEI!"
 if [[ $EUID -ne 0 ]]; then
 	echo "Permissão negada! Deve ser executado como root!"
 	exit 1
@@ -23,7 +22,6 @@ then
 		then
 			if [ -d $diretorioConf ]
 			then
-				echo "PEI DENOVO"
 				cp $arquivoPrincipal $diretorioPrincipal
 				cp $arquivoConf $diretorioConf
 				echo "script instalado com sucesso!"
